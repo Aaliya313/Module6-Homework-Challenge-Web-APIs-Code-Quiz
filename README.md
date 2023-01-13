@@ -21,7 +21,7 @@ Create a code quiz that contains the following requirements:
 
 * A start button that when clicked a timer starts and the first question appears.
  
-  * Questions contain buttons for each answer.
+  * Questions contain buttons for each answer. - if statement 
   * 
   * When answer is clicked, the next question appears
   * 
