@@ -15,14 +15,22 @@ var timeEl;
 var mainEl;
 var secondsLeft;
 var timerInterval;
+var startQuiz;
 
 
 
 //wHEN BUTTONS ARE CLICKED 
-const start = document.getElementById('start');
+startQuiz = document.getElementById('start');
 start.addEventListener("click", questionDisplayInitiation);
 
 function questionDisplayInitiation(){
+
+//After clicking on the start quiz button on the GUI want to initiate the questions to appear on the screen 
+// startQuiz = document.getElementById('hide');
+// for (var i = 0; i < quizQuestions.length; i++) {
+//     quizQuestions[i].style.display ='show';
+// }
+
 //When start button is clicked, the timer starts
 timeEl = document.querySelector(".timer");
 mainEl = document.getElementById("time");
@@ -45,6 +53,7 @@ function setTime() {
 function sendMessage() {
   timeEl.textContent = " ";
   alert("Ran out of time");
+
 }
 setTime();
 };
