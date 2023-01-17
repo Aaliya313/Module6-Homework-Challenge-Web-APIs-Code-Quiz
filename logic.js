@@ -5,9 +5,7 @@
 // * When answer is clicked, the next question appears
 // * If the answer clicked was incorrect then subtract time from the clock
 
-//REQUIREMENT 2
-// * The quiz should end when all questions are answered or the timer reaches 0.
-//   * When the game ends, it should display their score and give the user the ability to save their initials and their score
+
 
 
 //DECLARING ALL VARIABLES AS GLOBAL
@@ -62,8 +60,20 @@ setTime();
 // }
 
 
-
-
-
 };
+
+
+//REQUIREMENT 2
+// * The quiz should end when all questions are answered or the timer reaches 0.
+//   * When the game ends, it should display their score and give the user the ability to save their initials and their score
+
+//GameOver function
+// function gameOver() {
+//   if(secondsLeft === 0) {
+//     //redirect to highscores page 
+//     //display final score
+//     //write initials and save 
+
+//   }
+// };
 
