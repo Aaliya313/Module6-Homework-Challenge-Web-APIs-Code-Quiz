@@ -16,6 +16,9 @@ var mainEl;
 var secondsLeft;
 var timerInterval;
 var startQuiz;
+var counter = 0;
+var Score = 0;
+//var totalScore = 0;
 
 
 
@@ -24,14 +27,8 @@ startQuiz = document.getElementById('start');
 start.addEventListener("click", questionDisplayInitiation);
 
 function questionDisplayInitiation(){
-
-//After clicking on the start quiz button on the GUI want to initiate the questions to appear on the screen 
-// startQuiz = document.getElementById('hide');
-// for (var i = 0; i < quizQuestions.length; i++) {
-//     quizQuestions[i].style.display ='show';
-// }
-
-//When start button is clicked, the timer starts
+  
+  //When start button is clicked, the timer starts
 timeEl = document.querySelector(".timer");
 mainEl = document.getElementById("time");
 secondsLeft = 60;
@@ -56,7 +53,56 @@ function sendMessage() {
 
 }
 setTime();
+
+
+//After clicking on the start quiz button on the GUI want to initiate the questions to appear on the screen 
+// startQuiz = document.getElementById('hide');
+// for (var i = 0; i < quizQuestions.length; i++) {
+//     quizQuestions[i].style.display ='show';
+// }
+
+for (i = 0; i < quizQuestions.length; i++) {
+  for (j = 0; j < correctAnswers.length; j++) {
+    if (quizQuestions.Question1 === correctAnswers[0]) {
+      Score = counter++;
+      //go onto next question
+    } else {
+      //deduct time
+      //move onto next question
+    }
+    if (quizQuestions.Question2 === correctAnswers[1]) {
+      Score = counter++;
+      //go onto next question
+    } else {
+      //deduct time
+      //move onto next question
+    }
+    if (quizQuestions.Question3 === correctAnswers[2]) {
+      Score = counter++;
+      //go onto next question
+    } else {
+      //deduct time
+      //move onto next question
+    }
+    if (quizQuestions.Question4 === correctAnswers[3]) {
+      Score = counter++;
+      //go onto next question
+    } else {
+      //deduct time
+      //move onto next question
+    }
+    if (quizQuestions.Question5 === correctAnswers[4]) {
+      Score = counter++;
+      //go onto next question
+    } else {
+      //deduct time
+      //move onto next question
+    }
+  }
+}
+alert(Score);
+
+
+
 };
-
-
 
