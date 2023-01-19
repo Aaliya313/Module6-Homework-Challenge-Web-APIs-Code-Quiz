@@ -76,7 +76,7 @@ function setTime() {
     secondsLeft--; 
     timeEl.textContent = secondsLeft + " seconds left till you run out of time"; 
 
-    if(secondsLeft <= 0) {
+    if(secondsLeft < 0) {
       //clearInterval(timerInterval); 
       sendMessage(); 
     }
