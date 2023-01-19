@@ -38,16 +38,33 @@ showQuestionsTitle.style.display = "block";
 showQuestionsChoices.style.display = "block";
 
 showQuestionsTitle.textContent = quizQuestions[0].Question1;
-showQuestionsChoices.textContent = quizQuestions[0].Choice1a + quizQuestions[0].Choice1b + quizQuestions[0].Choice1c + quizQuestions[0].Choice1d;
 
-// showQuestionsTitle.textContent = quizQuestions[1].Question2;
-// showQuestionsChoices.textContent = quizQuestions[1].Choice2a + quizQuestions[1].Choice2b + quizQuestions[1].Choice2c + quizQuestions[1].Choice2d;
+showQuestionsChoices = document.getElementById('choices');
+var button1 = document.createElement('BUTTON');
+var text1 = document.createTextNode(quizQuestions[0].Choice1a);
+button1.appendChild(text1);
+showQuestionsChoices.appendChild(button1);
 
-// showQuestionsTitle.textContent = quizQuestions[2].Question3;
-// showQuestionsChoices.textContent = quizQuestions[2].Choice3a + quizQuestions[2].Choice3b + quizQuestions[2].Choice3c + quizQuestions[2].Choice3d;
+var button2 = document.createElement('BUTTON');
+var text2 = document.createTextNode(quizQuestions[0].Choice1b);
+button2.appendChild(text2);
+showQuestionsChoices.appendChild(button2);
 
-// showQuestionsTitle.textContent = quizQuestions[3].Question4;
-// showQuestionsChoices.textContent = quizQuestions[3].Choice4a + quizQuestions[3].Choice4b + quizQuestions[3].Choice4c + quizQuestions[3].Choice4d;
+var button3 = document.createElement('BUTTON');
+var text3 = document.createTextNode(quizQuestions[0].Choice1c);
+button3.appendChild(text3);
+showQuestionsChoices.appendChild(button3);
+
+var button4 = document.createElement('BUTTON');
+var text4 = document.createTextNode(quizQuestions[0].Choice1d);
+button4.appendChild(text4);
+showQuestionsChoices.appendChild(button4);
+
+
+
+
+
+
 
   //When start button is clicked, the timer starts
 timeEl = document.querySelector(".timer");
