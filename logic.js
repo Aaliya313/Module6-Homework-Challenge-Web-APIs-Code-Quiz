@@ -16,15 +16,38 @@ var timerInterval;
 var startQuiz;
 var counter = 0;
 var Score = 0;
+var startPage;
 
 
 
 
 //wHEN BUTTONS ARE CLICKED 
 startQuiz = document.getElementById('start');
-start.addEventListener("click", questionDisplayInitiation);
+startQuiz.addEventListener("click", questionDisplayInitiation);
+startPage = document.getElementById('start-screen');
+showQuestions = document.getElementById('questions');
+showQuestionsTitle = document.getElementById('question-title');
+showQuestionsChoices = document.getElementById('choices');
 
 function questionDisplayInitiation(){
+
+startQuiz.style.display = "none";
+startPage.style.display = "none";
+showQuestions.style.display = "block";
+showQuestionsTitle.style.display = "block";
+showQuestionsChoices.style.display = "block";
+
+showQuestionsTitle.textContent = quizQuestions[0].Question1;
+showQuestionsChoices.textContent = quizQuestions[0].Choice1a + quizQuestions[0].Choice1b + quizQuestions[0].Choice1c + quizQuestions[0].Choice1d;
+
+// showQuestionsTitle.textContent = quizQuestions[1].Question2;
+// showQuestionsChoices.textContent = quizQuestions[1].Choice2a + quizQuestions[1].Choice2b + quizQuestions[1].Choice2c + quizQuestions[1].Choice2d;
+
+// showQuestionsTitle.textContent = quizQuestions[2].Question3;
+// showQuestionsChoices.textContent = quizQuestions[2].Choice3a + quizQuestions[2].Choice3b + quizQuestions[2].Choice3c + quizQuestions[2].Choice3d;
+
+// showQuestionsTitle.textContent = quizQuestions[3].Question4;
+// showQuestionsChoices.textContent = quizQuestions[3].Choice4a + quizQuestions[3].Choice4b + quizQuestions[3].Choice4c + quizQuestions[3].Choice4d;
 
   //When start button is clicked, the timer starts
 timeEl = document.querySelector(".timer");
@@ -36,12 +59,12 @@ function setTime() {
     secondsLeft--; 
     timeEl.textContent = secondsLeft + " seconds left till you run out of time"; 
 
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval); 
+    if(secondsLeft <= 0) {
+      //clearInterval(timerInterval); 
       sendMessage(); 
     }
 
-  }, 500); //set in milliseconds 1 sec = 1000 milliseconds, but that's too slow for test purposes, change back when finished
+  }, 500); 
 }
 
 // Function to create what happens when timer runs out
@@ -51,29 +74,16 @@ function sendMessage() {
 
 }
 setTime();
-
-
-//After clicking on the start quiz button on the GUI want to initiate the questions to appear on the screen 
-// startQuiz = document.getElementById('hide');
-// for (var i = 0; i < quizQuestions.length; i++) {
-//     quizQuestions[i].style.display ='show';
-// }
-
-
 };
 
-
-//REQUIREMENT 2
-// * The quiz should end when all questions are answered or the timer reaches 0.
-//   * When the game ends, it should display their score and give the user the ability to save their initials and their score
 
 //GameOver function
 // function gameOver() {
 //   if(secondsLeft === 0) {
+        //disable buttons to answer question
 //     //redirect to highscores page 
-//     //display final score
-//     //write initials and save 
-
-//   }
+//   } else (all questions are answered) {
+          //redirecy to highscores page
+      //}
 // };
 

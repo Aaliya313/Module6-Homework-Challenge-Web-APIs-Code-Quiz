@@ -1,5 +1,10 @@
 //Logic to keep account of the scores - lnked to highscore pages
 
+//display final score
+//write initials and save 
+//USE LOCAL STORAGE NOW
+//REQ: //   * When the game ends, it should display their score and give the user the ability to save their initials and their score
+
 //Declaring Global Variables
 var counter = 0;
 var Score = 0;
