@@ -36,6 +36,7 @@ The comments in each JavaScript file outlines what has been done and further dev
 I had to alter the file structure as there were issue when the files were in different folders
 
 ## Deployed application Link
+https://aaliya313.github.io/Module6-Homework-Challenge-Web-APIs-Code-Quiz/
 
 
 ## Screenshot 
