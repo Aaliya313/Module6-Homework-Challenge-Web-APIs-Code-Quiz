@@ -1,9 +1,7 @@
-//JavaScript file for just the questions, store as one single variable and make an object array
-//To do:
-//make an object array for questions here 
-//on logic.js maybe need to do a for loop iterate through object array 
-// and addEventListener update the class of start to hide in the startQuiz addeventlistener in logic.js 
-//update the hide to show questions maybe in the css?
+//JavaScript file for just the questions and answers, store as two variable and make an object array
+/*Object array of quizQuestions and answers why: to iterate in a nested for loop so if the answer matched the one that was selected by the user...
+it will add a point and this will be connected to local stoage in scores.js*/
+
 
 //Quiz questions object array
 let quizQuestions = [

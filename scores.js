@@ -1,19 +1,21 @@
-//Logic to keep account of the scores - lnked to highscore pages
+//Logic to keep account of the scores, lnked to highscore.html
+/* Requirements:
+1) display final score
+2) write initials and save 
+3) User can save their initials and score
+TIP: USE LOCAL STORAGE  */
 
-//display final score
-//write initials and save 
-//USE LOCAL STORAGE NOW
-//REQ: //   * When the game ends, it should display their score and give the user the ability to save their initials and their score
 
 //Declaring Global Variables
 var counter = 0;
 var Score = 0;
 
+//Function to iterate through the quizquestions collect the answer that the user inputs and then checks wwith another for loop of the choice matches up to the answer
 function collectScore() {
 for (i = 0; i < quizQuestions.length; i++) {
     for (j = 0; j < correctAnswers.length; j++) {
       if (quizQuestions.Question1 === correctAnswers[0]) {
-        Score = counter++;
+        Score = counter++; //stores in this variable 
         //go onto next question
       } else {
         //deduct time
