@@ -31,7 +31,7 @@ Create a code quiz that contains the following requirements:
 
   * When the game ends, it should display their score and give the user the ability to save their initials and their score
 
-  ## Progress with this task
+## Progress with this task
 The comments in each JavaScript file outlines what has been done and further developments I need to make
 I had to alter the file structure as there were issue when the files were in different folders
 
